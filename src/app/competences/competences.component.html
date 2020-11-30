@@ -1,8 +1,11 @@
 <ul>
-    <li *ngFor="let competence of this.list">
+    <li *ngFor="let competence of this.list;">
         <span>{{ competence.name }}</span>
         <span *ngIf="competence.completed"
         (click)="celebrate(competence)"
         >✅ {{ competence.completed | date:'short' }}</span>
+        <span (click)="delete(competence)">❌</span>
     </li>
 </ul>
+
+<input type="text" #txtName (keyup.enter)="onKeyUp(txtName)">

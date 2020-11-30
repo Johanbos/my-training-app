@@ -8,19 +8,25 @@ import { Component, HostListener } from '@angular/core';
 export class AppComponent {
   title = 'my-training-app';
   online = true;
+  smallViewPort = false;
+
+  constructor() {
+    this.onResize();
+  }
 
   @HostListener('window:offline')
-  goOffline() {
+  onOffline() {
     this.online = false;
   }
 
   @HostListener('window:online')
-  goOnline() {
+  onOnline() {
     this.online = true;
   }
 
-  @HostListener('window:resize')
-  goResize() {
-    
+  @HostListener('window:resize', ['$event'])
+  onResize(event?: any) {
+    const currentWindow = event != null ? event.target.window : window;
+    this.smallViewPort = currentWindow.innerWidth < 500;
   }
 }

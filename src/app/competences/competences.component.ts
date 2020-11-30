@@ -20,4 +20,15 @@ export class CompetencesComponent implements OnInit {
   celebrate(competence: Competence): void {
     alert(competence.name + " is awesome");
   }
+
+  delete(competence: Competence): void {
+    this.list = this.list.filter(item => item.name != competence.name);
+  }
+
+  onKeyUp(input: HTMLInputElement) {
+    if (input.value != '') {
+      this.list.push({ name: input.value });
+      input.value = '';
+    }
+  }
 }
