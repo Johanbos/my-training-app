@@ -1,4 +1,3 @@
-<h2>Competences of training {{ training.name }}</h2>
 <ul>
-    <li *ngFor="let competence of training.competences">{{ competence }}</li>
+    <li *ngFor="let competence of this.list">{{ competence.name }}</li>
 </ul>

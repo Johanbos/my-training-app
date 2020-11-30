@@ -1,5 +1,7 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { Training } from '../model/training';
+import { Competence } from '../shared/model/competence';
+import { Training } from '../shared/model/training';
 
 @Component({
   selector: 'app-competences',
@@ -8,15 +10,9 @@ import { Training } from '../model/training';
 })
 
 export class CompetencesComponent implements OnInit {
-  training = new Training();
+  @Input() list: Competence[] = [];
   constructor() { }
 
   ngOnInit(): void {
-    this.training.name = 'Angular Basics';
-    this.training.competences = [
-      'App setup / configs / index / module / component',
-      'Cli',
-      'Lifecycle',
-      'Data binding'];
   }
 }
