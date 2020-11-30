@@ -1,3 +1,6 @@
 <ul>
-    <li *ngFor="let competence of this.list">{{ competence.name }}</li>
+    <li *ngFor="let competence of this.list">
+        <span>{{ competence.name }}</span>
+        <span *ngIf="competence.completed">✅ {{ competence.completed }}</span>
+    </li>
 </ul>

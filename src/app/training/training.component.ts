@@ -15,7 +15,7 @@ export class TrainingComponent implements OnInit {
     this.training.competences.push( { name: 'App setup / configs / index / module / component' });
     this.training.competences.push( { name: 'Cli' });
     this.training.competences.push( { name: 'Lifecycle' });
-    this.training.competences.push( { name: 'Data binding' });
+    this.training.competences.push( { name: 'Data binding', completed: new Date(2020, 11, 30, 14, 0) });
     this.training.competences.push( { name: 'Class / Interface' });
   }
 
