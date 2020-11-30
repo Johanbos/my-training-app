@@ -18,4 +18,9 @@ export class AppComponent {
   goOnline() {
     this.online = true;
   }
+
+  @HostListener('window:resize')
+  goResize() {
+    
+  }
 }
