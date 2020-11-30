@@ -1,7 +1,6 @@
 import { Competence } from './competence';
 
-export class Training {
-    constructor(
-        public name?: string,
-        public competences: Competence[] = []) { }
+export interface Training {
+    name: string;
+    competences: Competence[];
 }

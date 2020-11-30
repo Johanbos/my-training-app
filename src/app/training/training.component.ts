@@ -7,7 +7,7 @@ import { Training } from '../shared/model/training';
   styleUrls: ['./training.component.css']
 })
 export class TrainingComponent implements OnInit {
-  training = new Training();
+  training: Training = { name: '', competences: []};
   constructor() { }
 
   ngOnInit(): void {
@@ -16,6 +16,7 @@ export class TrainingComponent implements OnInit {
     this.training.competences.push( { name: 'Cli' });
     this.training.competences.push( { name: 'Lifecycle' });
     this.training.competences.push( { name: 'Data binding' });
+    this.training.competences.push( { name: 'Class / Interface' });
   }
 
 }

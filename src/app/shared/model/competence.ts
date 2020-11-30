@@ -1,3 +1,3 @@
-export class Competence {
-    constructor(public name: string){}
+export interface Competence {
+    name: string;
 }
