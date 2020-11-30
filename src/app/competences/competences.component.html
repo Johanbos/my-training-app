@@ -1,11 +1,15 @@
-<ul>
+<ul [style.background-color]="backgroundColor">
     <li *ngFor="let competence of this.list;">
         <span>{{ competence.name }}</span>
         <span *ngIf="competence.completed"
         (click)="celebrate(competence)"
         >✅ {{ competence.completed | date:'short' }}</span>
-        <span (click)="delete(competence)">❌</span>
+        <span *ngIf="!competence.completed" (click)="delete(competence)">❌</span>
     </li>
 </ul>
 
-<input type="text" #txtName (keyup.enter)="onKeyUp(txtName)">
+<h3>Add something cool</h3>
+<input type="text" #txtName (keyup.enter)="onAdd(txtName)">
+
+<h3>Make it colorful</h3>
+<input type="text" #txtColor (keyup.enter)="onColor(txtColor)">
