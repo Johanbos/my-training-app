@@ -1,6 +1,8 @@
 <ul>
     <li *ngFor="let competence of this.list">
         <span>{{ competence.name }}</span>
-        <span *ngIf="competence.completed">✅ {{ competence.completed }}</span>
+        <span *ngIf="competence.completed"
+        (click)="celebrate(competence)"
+        >✅ {{ competence.completed | date:'short' }}</span>
     </li>
 </ul>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-training-app';
+  online = true;
+
+  @HostListener('window:offline')
+  goOffline() {
+    this.online = false;
+  }
+
+  @HostListener('window:online')
+  goOnline() {
+    this.online = true;
+  }
 }

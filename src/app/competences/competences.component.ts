@@ -1,4 +1,4 @@
-import { Input } from '@angular/core';
+import { HostListener, Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Competence } from '../shared/model/competence';
 import { Training } from '../shared/model/training';
@@ -11,8 +11,13 @@ import { Training } from '../shared/model/training';
 
 export class CompetencesComponent implements OnInit {
   @Input() list: Competence[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  celebrate(competence: Competence): void {
+    alert(competence.name + " is awesome");
   }
 }

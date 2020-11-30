@@ -17,6 +17,7 @@ export class TrainingComponent implements OnInit {
     this.training.competences.push( { name: 'Lifecycle' });
     this.training.competences.push( { name: 'Data binding', completed: new Date(2020, 11, 30, 14, 0) });
     this.training.competences.push( { name: 'Class / Interface' });
+    this.training.competences.push( { name: 'Events dom & host' });
   }
 
 }
