@@ -1,8 +1,6 @@
 <app-loading [loading]="loading"></app-loading>
 <ul>
-    <li *ngFor="let link of this.list">
+    <li *ngFor="let link of this.list$ | async">
         🔗 <a [href]="link" target="_blank">{{link}}</a>
     </li>
 </ul>
-<!--<h3>Add more</h3>
- <input type="text" #txtLink (keyup.enter)="onAdd(txtLink)"> -->
