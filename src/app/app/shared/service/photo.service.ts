@@ -14,7 +14,9 @@ export class PhotoService {
     return this.httpClient.get<any[]>('https://jsonplaceholder.typicode.com/photos')
       .pipe(
         map((data) => data.slice(1, 30)),
-        map((data) => data.map(img => { return { ...img, thumbnailUrl: "https://picsum.photos/200?random=" + img.id } })),
+        map((data) => data.map(img => {
+          return { ...img, thumbnailUrl: "https://picsum.photos/200?random=" + img.id };
+        })),
         delay(1000),
       );
   }

@@ -9,8 +9,9 @@ import { LinksService } from '../shared/service/links.service';
   styleUrls: ['./links.component.css']
 })
 export class LinksComponent implements OnInit {
-  public list$: Observable<string[]> | undefined;
+  list$: Observable<string[]> | undefined;
   loading = true;
+
   constructor(private linksService: LinksService) { }
 
   ngOnInit(): void {
