@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { BackgroundColorService } from './shared/service/background-color.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ export class AppComponent {
   online = true;
   smallViewPort = false;
 
-  constructor() {
+  constructor(public backgroundColorService: BackgroundColorService) {
     this.onResize();
   }
 

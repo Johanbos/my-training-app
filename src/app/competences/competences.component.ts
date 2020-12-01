@@ -1,6 +1,7 @@
 import { EventEmitter, HostListener, Input, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Competence } from '../shared/model/competence';
+import { BackgroundColorService } from '../shared/service/background-color.service';
 
 @Component({
   selector: 'app-competences',
@@ -10,9 +11,9 @@ import { Competence } from '../shared/model/competence';
 
 export class CompetencesComponent implements OnInit {
   @Input() list: Competence[] = [];
-  backgroundColor = '';
-  
-  constructor() { }
+
+
+  constructor(public backgroundColorService: BackgroundColorService) { }
 
   ngOnInit(): void {
   }
