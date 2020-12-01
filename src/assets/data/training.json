@@ -30,7 +30,11 @@
             "completed": "2020-12-01 11:00"
         },
         {
-            "name": "Observables"
+            "name": "Observables",
+            "completed": "2020-12-01 13:00"
+        },
+        {
+            "name": "Json Server"
         }
     ]
 }
