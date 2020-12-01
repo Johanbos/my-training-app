@@ -11,14 +11,11 @@ import { BackgroundColorService } from '../shared/service/background-color.servi
 
 export class CompetencesComponent implements OnInit {
   @Input() list: Competence[] = [];
+  currentCompetence: Competence | undefined;
 
   constructor(public backgroundColorService: BackgroundColorService) { }
 
   ngOnInit(): void {
-  }
-
-  celebrate(competence: Competence): void {
-    alert(`${competence.name} is awesome`);
   }
 
   delete(competence: Competence): void {

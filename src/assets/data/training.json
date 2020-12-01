@@ -36,6 +36,9 @@
         {
             "name": "Json Server / Api's",
             "completed": "2020-12-01 14:30"
+        },
+        {
+            "name": "Component tree"
         }
     ]
 }

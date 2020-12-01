@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { LinksComponent } from './links/links.component';
 import { LoadingComponent } from './loading/loading.component';
 import { PhotosComponent } from './photos/photos.component';
+import { CompetenceComponent } from './competence/competence.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PhotosComponent } from './photos/photos.component';
     TrainingComponent,
     LinksComponent,
     LoadingComponent,
-    PhotosComponent],
+    PhotosComponent,
+    CompetenceComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

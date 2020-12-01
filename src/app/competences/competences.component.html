@@ -1,13 +1,14 @@
 <ul>
-    <li *ngFor="let competence of this.list;" [class.completed]="competence.completed">
+    <li *ngFor="let competence of this.list;" [class.completed]="competence.completed" #competence
+        (click)="currentCompetence=competence">
         <span *ngIf="competence.completed">✅</span>
         <span *ngIf="!competence.completed">⬜</span>
-        <span>{{ competence.name }}</span>
-        <span *ngIf="competence.completed" (click)="celebrate(competence)">
-            {{ competence.completed | date:'short' }}</span>
+        <span>{{ competence.name }} {{ competence.completed | date:'short' }}</span>
         <span *ngIf="!competence.completed" class="delete" (click)="delete(competence)">❌</span>
     </li>
 </ul>
+
+<app-competence [competence]="currentCompetence" (onDelete)=delete($event)></app-competence>
 
 <h3>Add something cool</h3>
 <input type="text" #txtName (keyup.enter)="onAdd(txtName)">
