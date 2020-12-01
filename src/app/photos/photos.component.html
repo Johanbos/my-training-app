@@ -1,0 +1,2 @@
+<app-loading [loading]="loading"></app-loading>
+<img *ngFor="let i of this.list$ | async" [src]="i.thumbnailUrl" [alt]="i.title" />
