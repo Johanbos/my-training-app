@@ -7,11 +7,16 @@ import { LinksService } from '../shared/service/links.service';
   styleUrls: ['./links.component.css']
 })
 export class LinksComponent implements OnInit {
-  list: string[] = []
+  list: string[] = [];
+  loading = true;
   constructor(private linksService: LinksService) { }
 
   ngOnInit(): void {
-    this.list = this.linksService.getLinks();
+
+    this.linksService.getLinks().subscribe((data) => {
+      this.list = data;
+      this.loading = false;
+    });
   }
 
 }

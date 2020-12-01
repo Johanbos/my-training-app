@@ -1,16 +1,19 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LinksService {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
-  getLinks() : string[] {
-    return [
-      'https://angular.io/guide/cheatsheet',
-      'https://github.com/PeterKassenaar/voorbeeldenAngular2',
-    ]
+  getLinks(): Observable<string[]> {
+    return this.httpClient.get<string[]>('/assets/data/links.json')
+      .pipe(
+        delay(1000)
+      );
   }
 }
