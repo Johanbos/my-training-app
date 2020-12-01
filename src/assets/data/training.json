@@ -1,0 +1,36 @@
+{
+    "name": "Angular Fundementals",
+    "competences": [
+        {
+            "name": "App setup / configs / index / module / component",
+            "completed": "2020-11-30 10:00"
+        },
+        {
+            "name": "Cli",
+            "completed": "2020-11-30 10:00"
+        },
+        {
+            "name": "Lifecycle",
+            "completed": "2020-11-30 10:00"
+        },
+        {
+            "name": "Class / Interface",
+            "completed": "2020-11-30 10:00"
+        },
+        {
+            "name": "Events dom & host",
+            "completed": "2020-11-30 10:00"
+        },
+        {
+            "name": "Data binding",
+            "completed": "2020-12-01 10:00"
+        },
+        {
+            "name": "Services",
+            "completed": "2020-12-01 11:00"
+        },
+        {
+            "name": "Observables"
+        }
+    ]
+}

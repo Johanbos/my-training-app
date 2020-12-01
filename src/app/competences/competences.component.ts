@@ -12,7 +12,6 @@ import { BackgroundColorService } from '../shared/service/background-color.servi
 export class CompetencesComponent implements OnInit {
   @Input() list: Competence[] = [];
 
-
   constructor(public backgroundColorService: BackgroundColorService) { }
 
   ngOnInit(): void {

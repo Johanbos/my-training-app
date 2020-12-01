@@ -8,10 +8,14 @@ import { TrainingService } from '../shared/service/training.service';
   styleUrls: ['./training.component.css']
 })
 export class TrainingComponent implements OnInit {
-  training: Training = { name: '', competences: []};
+  training: Training = { name: '', competences: [] };
+  loading = true;
   constructor(private trainingService: TrainingService) { }
 
   ngOnInit(): void {
-    this.training = this.trainingService.getTraining();
+    this.trainingService.getTraining().subscribe((data) => {
+      this.training = data;
+      this.loading = false;
+    });
   }
 }

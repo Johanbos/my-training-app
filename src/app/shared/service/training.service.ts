@@ -1,22 +1,19 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { delay } from 'rxjs/operators';
 import { Training } from '../model/training';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TrainingService {
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
-  getTraining(): Training {
-    const training: Training = { name: 'Angular Fundamentals', competences: [] };
-    training.competences.push({ name: 'App setup / configs / index / module / component', completed: new Date(2020, 11, 30, 10, 0) });
-    training.competences.push({ name: 'Cli', completed: new Date(2020, 11, 30, 10, 0) });
-    training.competences.push({ name: 'Lifecycle', completed: new Date(2020, 11, 30, 10, 0) });
-    training.competences.push({ name: 'Class / Interface', completed: new Date(2020, 11, 30, 10, 0) });
-    training.competences.push({ name: 'Events dom & host', completed: new Date(2020, 11, 30, 10, 0) });
-    training.competences.push({ name: 'Data binding', completed: new Date(2020, 12, 1, 10, 0) });
-    training.competences.push({ name: 'Services', completed: new Date(2020, 12, 1, 11, 0) });
-    training.competences.push({ name: 'Observables' });
-    return training;
+  getTraining(): Observable<Training> {
+    return this.httpClient.get<Training>('/assets/data/training.json')
+      .pipe(
+        delay(1000)
+      );
   }
 }

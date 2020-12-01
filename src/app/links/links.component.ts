@@ -12,7 +12,6 @@ export class LinksComponent implements OnInit {
   constructor(private linksService: LinksService) { }
 
   ngOnInit(): void {
-
     this.linksService.getLinks().subscribe((data) => {
       this.list = data;
       this.loading = false;
