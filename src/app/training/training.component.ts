@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Training } from '../shared/model/training';
+import { TrainingService } from '../shared/service/training.service';
 
 @Component({
   selector: 'app-training',
@@ -8,16 +9,9 @@ import { Training } from '../shared/model/training';
 })
 export class TrainingComponent implements OnInit {
   training: Training = { name: '', competences: []};
-  constructor() { }
+  constructor(private trainingService: TrainingService) { }
 
   ngOnInit(): void {
-    this.training.name = 'Angular Fundamentals';
-    this.training.competences.push( { name: 'App setup / configs / index / module / component' });
-    this.training.competences.push( { name: 'Cli' });
-    this.training.competences.push( { name: 'Lifecycle' });
-    this.training.competences.push( { name: 'Data binding', completed: new Date(2020, 11, 30, 14, 0) });
-    this.training.competences.push( { name: 'Class / Interface' });
-    this.training.competences.push( { name: 'Events dom & host' });
+    this.training = this.trainingService.getTraining();
   }
-
 }
