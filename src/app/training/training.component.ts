@@ -11,7 +11,7 @@ export class TrainingComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.training.name = 'Angular Basics';
+    this.training.name = 'Angular Fundamentals';
     this.training.competences.push( { name: 'App setup / configs / index / module / component' });
     this.training.competences.push( { name: 'Cli' });
     this.training.competences.push( { name: 'Lifecycle' });

@@ -1,7 +1,6 @@
 import { EventEmitter, HostListener, Input, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Competence } from '../shared/model/competence';
-import { Training } from '../shared/model/training';
 
 @Component({
   selector: 'app-competences',
@@ -11,8 +10,7 @@ import { Training } from '../shared/model/training';
 
 export class CompetencesComponent implements OnInit {
   @Input() list: Competence[] = [];
-  backgroundColor = 'auto';
-  @Output() backgroundColorChange = new EventEmitter<string>();
+  backgroundColor = '';
   
   constructor() { }
 
@@ -30,14 +28,6 @@ export class CompetencesComponent implements OnInit {
   onAdd(input: HTMLInputElement) {
     if (input.value != '') {
       this.list.push({ name: input.value });
-      input.value = '';
-    }
-  }
-
-  onColor(input: HTMLInputElement) {
-    if (input.value != '') {
-      this.backgroundColor = input.value;
-      this.backgroundColorChange.emit(input.value)
       input.value = '';
     }
   }
