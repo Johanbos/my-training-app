@@ -1,4 +1,4 @@
-<div class="content" role="main" [style.background-color]="this.backgroundColorService.value">
+<div class="content" role="main" [style.background-color]="this.backgroundColor$ | async">
 
   <!-- Highlight Card -->
   <div class="card highlight-card card-small">

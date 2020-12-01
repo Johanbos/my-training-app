@@ -10,9 +10,11 @@ export class AppComponent {
   title = 'my-training-app';
   online = true;
   smallViewPort = false;
+  backgroundColor$: any;
 
-  constructor(public backgroundColorService: BackgroundColorService) {
+  constructor(private backgroundColorService: BackgroundColorService) {
     this.onResize();
+    this.backgroundColor$ = this.backgroundColorService.value$.asObservable();
   }
 
   @HostListener('window:offline')

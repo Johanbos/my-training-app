@@ -28,4 +28,12 @@ export class CompetencesComponent implements OnInit {
       input.value = '';
     }
   }
+
+  onColor(input: HTMLInputElement) {
+    console.log(`Color: ${input.value}`);
+    if (input.value != '') {
+      this.backgroundColorService.value$.next(input.value);
+      input.value = '';
+    }
+  }
 }
