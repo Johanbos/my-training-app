@@ -1,3 +1,11 @@
+ul {
+    list-style-type: none;
+}
+
 .completed {
-    background-color: rgb(108, 175, 108);
+    background-color: rgb(210, 240, 210);
+}
+
+.delete {
+    cursor: pointer;
 }

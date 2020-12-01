@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { CompetencesComponent } from './competences/competences.component';
 import { TrainingComponent } from './training/training.component';
 import { FormsModule } from '@angular/forms';
+import { LinksComponent } from './links/links.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CompetencesComponent,
-    TrainingComponent ],
+    TrainingComponent,
+    LinksComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,

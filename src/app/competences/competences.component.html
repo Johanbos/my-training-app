@@ -1,10 +1,10 @@
 <ul [style.background-color]="backgroundColor">
     <li *ngFor="let competence of this.list;" [class.completed]="competence.completed">
+        <span *ngIf="competence.completed">✅</span>
+        <span *ngIf="!competence.completed">⬜</span>
         <span>{{ competence.name }}</span>
-        <span *ngIf="competence.completed"
-        (click)="celebrate(competence)"
-        >✅ {{ competence.completed | date:'short' }}</span>
-        <span *ngIf="!competence.completed" (click)="delete(competence)">❌</span>
+        <span *ngIf="competence.completed" (click)="celebrate(competence)" > {{ competence.completed | date:'short' }}</span>
+        <span *ngIf="!competence.completed" class="delete" (click)="delete(competence)">❌</span>
     </li>
 </ul>
 
