@@ -1,0 +1,7 @@
+<div *ngFor="let competence of this.competences;" #competence>
+    <span>{{ competence.name }}</span>
+    <span *ngIf="competence.rate"> ({{competence.rate}})</span>
+</div>
+<div>
+    Averge rate: {{averageRate()}}
+</div>

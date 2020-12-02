@@ -13,7 +13,10 @@
     </tr>
     <tr>
         <td colspan=2>
-            <button [disabled]="competence?.completed" class="delete" (click)="doDelete()">Delete</button>
+            <button [disabled]="competence?.completed" class="delete" (click)="deleteCompetenceClick()">❌
+                Delete</button>
+            <button class="favorite" (click)="favoriteCompetenceClick()">⭐ Favorite</button>
+            <button class="favorite" (click)="unFavoriteCompetenceClick()">🙁 Unfavorite</button>
         </td>
     </tr>
 </table>

@@ -10,6 +10,7 @@ import { LoadingComponent } from './shared/loading/loading.component';
 import { PhotosComponent } from './photos/photos.component';
 import { CompetenceComponent } from './training/competence/competence.component';
 import { CompetencesComponent } from './training/competences/competences.component';
+import { FavoritesComponent } from './shared/favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CompetencesComponent } from './training/competences/competences.compone
     LinksComponent,
     LoadingComponent,
     PhotosComponent,
-    CompetenceComponent],
+    CompetenceComponent,
+    FavoritesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
