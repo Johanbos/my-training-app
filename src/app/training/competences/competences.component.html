@@ -3,8 +3,8 @@
         (click)="currentCompetence=competence">
         <span *ngIf="competence.completed">✅</span>
         <span *ngIf="!competence.completed">⬜</span>
-        <span>{{ competence.name }} {{ competence.completed | date:'short' }}</span>
-        <span *ngIf="!competence.completed" class="delete" (click)="delete(competence)">❌</span>
+        <span>{{ competence.name }} ({{competence.rate}})</span>
+        <span *ngIf="!competence.completed" class="delete" (click)="deleteCompetence(competence)">❌</span>
     </li>
 </ul>
 

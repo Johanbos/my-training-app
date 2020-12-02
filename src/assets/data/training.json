@@ -3,39 +3,48 @@
     "competences": [
         {
             "name": "App setup / configs / index / module / component",
-            "completed": "2020-11-30 10:00"
+            "completed": "2020-11-30 10:00",
+            "rate": 2
         },
         {
             "name": "Cli",
-            "completed": "2020-11-30 10:00"
+            "completed": "2020-11-30 10:00",
+            "rate": 2
         },
         {
             "name": "Lifecycle",
-            "completed": "2020-11-30 10:00"
+            "completed": "2020-11-30 10:00",
+            "rate": 4
         },
         {
             "name": "Class / Interface",
-            "completed": "2020-11-30 10:00"
+            "completed": "2020-11-30 10:00",
+            "rate": 2
         },
         {
             "name": "Events dom & host",
-            "completed": "2020-11-30 10:00"
+            "completed": "2020-11-30 10:00",
+            "rate": 2
         },
         {
             "name": "Data binding",
-            "completed": "2020-12-01 10:00"
+            "completed": "2020-12-01 10:00",
+            "rate": 3
         },
         {
             "name": "Services",
-            "completed": "2020-12-01 11:00"
+            "completed": "2020-12-01 11:00",
+            "rate": 5
         },
         {
             "name": "Observables",
-            "completed": "2020-12-01 13:00"
+            "completed": "2020-12-01 13:00",
+            "rate": 5
         },
         {
             "name": "Json Server / Api's",
-            "completed": "2020-12-01 14:30"
+            "completed": "2020-12-01 14:30",
+            "rate": 2
         },
         {
             "name": "Component tree"

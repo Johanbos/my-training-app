@@ -1,15 +1,19 @@
 <table *ngIf="competence">
     <tr>
         <td>Name</td>
-        <td>{{ competence.name }}</td>
+        <td>{{ competence?.name }}</td>
     </tr>
     <tr>
         <td>Completed</td>
-        <td>{{ competence.completed }}</td>
+        <td>{{ competence?.completed }}</td>
+    </tr>
+    <tr>
+        <td>Rate</td>
+        <td>{{ competence?.rate }}</td>
     </tr>
     <tr>
         <td colspan=2>
-            <button [disabled]="competence.completed" class="delete" (click)="doDelete()">Delete</button>
+            <button [disabled]="competence?.completed" class="delete" (click)="doDelete()">Delete</button>
         </td>
     </tr>
 </table>
