@@ -11,6 +11,7 @@ import { FavoritesService } from '../service/favorites.service';
 export class FavoritesComponent implements OnInit, OnDestroy {
   competenceAddedSubscription: Subscription | undefined;
   competenceDeletedSubscription: Subscription | undefined;
+  /** @deprecated needs to be a service/store **/
   competences: Competence[] = [];
 
   constructor(private favoritesService: FavoritesService) { }
