@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { map, switchMap, tap } from 'rxjs/operators';
+import { combineLatest, forkJoin, Observable } from 'rxjs';
+import { combineAll, map, switchMap, tap } from 'rxjs/operators';
 import { Course } from 'src/app/shared/model/course';
 import { CoursesService } from 'src/app/shared/service/courses.service';
 
@@ -19,10 +19,11 @@ export class CourseComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.course$ = this.activatedRoute.params
+    this.course$ = combineLatest([this.activatedRoute.params, this.activatedRoute.queryParams])
       .pipe(
-        map(params => params.name),
-        switchMap((name) => this.coursesService.getCourse(name)),
+        tap((x) => console.log(x)),
+        map(([params, queryParams]) => [params.name, queryParams.delay]),
+        switchMap(([name, delay]) => this.coursesService.getCourse(name, delay)),
         tap(() => this.loading = false)
       );
   }

@@ -10,11 +10,11 @@ import { Course } from '../model/course';
 export class CoursesService {
   constructor(private httpClient: HttpClient) { }
 
-  getCourse(name: string): Observable<Course | undefined> {
+  getCourse(name: string, delayAmount: number = 1000): Observable<Course | undefined> {
     return this.httpClient.get<Course[]>('/assets/data/courses.json')
       .pipe(
         map((courses) => courses.find(i => i.name == name)),
-        delay(1000)
+        delay(delayAmount)
       );
   }
 
