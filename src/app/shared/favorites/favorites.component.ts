@@ -18,20 +18,14 @@ export class FavoritesComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.competenceAddedSubscription = this.favoritesService.competenceAdded$.subscribe((competence) => this.competenceAdded(competence));
-    this.competenceDeletedSubscription = this.favoritesService.competenceDeleted$.subscribe((competence) => this.competenceDeleted(competence));
   }
 
   ngOnDestroy(): void {
     this.competenceAddedSubscription?.unsubscribe();
-    this.competenceDeletedSubscription?.unsubscribe();
   }
 
   competenceAdded(competence: Competence): void {
     this.competences.push(competence);
-  }
-
-  competenceDeleted(competence: Competence): void {
-    this.competences = this.competences.filter(item => item.name != competence.name);
   }
 
   get averageRate(): number {

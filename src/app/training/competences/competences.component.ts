@@ -29,6 +29,11 @@ export class CompetencesComponent implements OnInit {
     }
   }
 
+  saveCompetence(competence: Competence) {
+    // oops, we don't have id's :D just add it
+    this.list.push(competence);
+  }
+
   changeBackgroundColor(input: HTMLInputElement) {
     if (input.value != '') {
       this.backgroundColorService.value$.next(input.value);

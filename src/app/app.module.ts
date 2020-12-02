@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LinksComponent } from './links/links.component';
 import { LoadingComponent } from './shared/loading/loading.component';
 import { PhotosComponent } from './photos/photos.component';
@@ -33,7 +33,7 @@ import { CourseComponent } from './training/course/course.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],

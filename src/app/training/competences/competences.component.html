@@ -9,7 +9,8 @@
     </li>
 </ul>
 
-<app-competence [competence]="currentCompetence" (deleteCompetence)=deleteCompetence($event)></app-competence>
+<app-competence [competence]="currentCompetence" (saveCompetence)=saveCompetence($event)
+    (deleteCompetence)=deleteCompetence($event)></app-competence>
 
 <h3>Add something cool</h3>
 <input type="text" #txtName (keyup.enter)="addCompetence(txtName)">

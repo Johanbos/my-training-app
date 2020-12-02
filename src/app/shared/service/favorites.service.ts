@@ -7,7 +7,6 @@ import { Competence } from '../model/competence';
 })
 export class FavoritesService {
   competenceAdded$ = new ReplaySubject<Competence>();
-  competenceDeleted$ = new ReplaySubject<Competence>();
 
   constructor() { }
 }

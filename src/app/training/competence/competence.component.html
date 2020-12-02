@@ -1,22 +1,19 @@
-<table *ngIf="competence">
-    <tr>
-        <td>Name</td>
-        <td>{{ competence?.name }}</td>
-    </tr>
-    <tr>
-        <td>Completed</td>
-        <td>{{ competence?.completed }}</td>
-    </tr>
-    <tr>
-        <td>Rate</td>
-        <td>{{ competence?.rate }}</td>
-    </tr>
-    <tr>
-        <td colspan=2>
-            <button [disabled]="competence?.completed" class="delete" (click)="deleteCompetenceClick()">❌
-                Delete</button>
-            <button class="favorite" (click)="favoriteCompetenceClick()">⭐ Favorite</button>
-            <button class="favorite" (click)="unFavoriteCompetenceClick()">🙁 Unfavorite</button>
-        </td>
-    </tr>
-</table>
+<ng-container *ngIf="competence">
+    <h3>Edit</h3>
+    <form novalidate [formGroup]="formGroup" (ngSubmit)="submit()">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Name" formControlName="name">
+        </div>
+        <div class="form-group">
+            <input type="datetime" class="form-control" placeholder="Completed" formControlName="completed">
+        </div>
+        <div class="form-group">
+            <input type="number" class="form-control" placeholder="Rate" formControlName="rate">
+        </div>
+        <div>
+            <button type="submit">✅ Save</button>
+            <button type="button" (click)="deleteCompetenceClick()">❌ Delete</button>
+            <button type="button" (click)="favoriteCompetenceClick()">⭐ Favorite</button>
+        </div>
+    </form>
+</ng-container>

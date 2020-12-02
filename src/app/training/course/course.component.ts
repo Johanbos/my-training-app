@@ -21,7 +21,6 @@ export class CourseComponent implements OnInit {
   ngOnInit(): void {
     this.course$ = combineLatest([this.activatedRoute.params, this.activatedRoute.queryParams])
       .pipe(
-        tap((x) => console.log(x)),
         map(([params, queryParams]) => [params.name, queryParams.delay]),
         switchMap(([name, delay]) => this.coursesService.getCourse(name, delay)),
         tap(() => this.loading = false)
