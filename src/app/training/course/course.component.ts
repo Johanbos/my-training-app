@@ -2,19 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, switchMap, tap } from 'rxjs/operators';
-import { Training } from 'src/app/shared/model/training';
-import { TrainingService } from 'src/app/shared/service/training.service';
+import { Course } from 'src/app/shared/model/course';
+import { CoursesService } from 'src/app/shared/service/courses.service';
 
 @Component({
   selector: 'app-course',
-  templateUrl: './training.component.html',
-  styleUrls: ['./training.component.css']
+  templateUrl: './course.component.html',
+  styleUrls: ['./course.component.css']
 })
-export class TrainingComponent implements OnInit {
+export class CourseComponent implements OnInit {
   loading = true;
-  course$: Observable<Training | undefined> | undefined;
+  course$: Observable<Course | undefined> | undefined;
   constructor(
-    private trainingService: TrainingService,
+    private coursesService: CoursesService,
     private activatedRoute: ActivatedRoute
   ) { }
 
@@ -22,7 +22,7 @@ export class TrainingComponent implements OnInit {
     this.course$ = this.activatedRoute.params
       .pipe(
         map(params => params.name),
-        switchMap((name) => this.trainingService.getTraining(name)),
+        switchMap((name) => this.coursesService.getCourse(name)),
         tap(() => this.loading = false)
       );
   }

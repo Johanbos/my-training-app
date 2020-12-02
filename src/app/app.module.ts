@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TrainingComponent } from './training/training/training.component';
 import { FormsModule } from '@angular/forms';
 import { LinksComponent } from './links/links.component';
 import { LoadingComponent } from './shared/loading/loading.component';
@@ -15,12 +14,13 @@ import { PageNotFoundComponent } from './core/page-not-found/page-not-found.comp
 import { HomeComponent } from './core/home/home.component';
 import { MenuComponent } from './core/menu/menu.component';
 import { CoursesComponent } from './training/courses/courses.component';
+import { CourseComponent } from './training/course/course.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CompetencesComponent,
-    TrainingComponent,
+    CourseComponent,
     LinksComponent,
     LoadingComponent,
     PhotosComponent,

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { Training } from 'src/app/shared/model/training';
-import { TrainingService } from 'src/app/shared/service/training.service';
+import { Course } from 'src/app/shared/model/course';
+import { CoursesService } from 'src/app/shared/service/courses.service';
 
 @Component({
   selector: 'app-courses',
@@ -11,12 +11,12 @@ import { TrainingService } from 'src/app/shared/service/training.service';
 })
 export class CoursesComponent implements OnInit {
   loading = true;
-  courses$: Observable<Training[]> | undefined;
+  courses$: Observable<Course[]> | undefined;
 
-  constructor(private trainingService: TrainingService) { }
+  constructor(private coursesService: CoursesService) { }
 
   ngOnInit(): void {
-    this.courses$ = this.trainingService.getCourses().pipe(
+    this.courses$ = this.coursesService.getCourses().pipe(
       tap(() => this.loading = false)
     );
   }
