@@ -18,19 +18,18 @@ export class CompetencesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  delete(competence: Competence): void {
+  deleteCompetence(competence: Competence): void {
     this.list = this.list.filter(item => item.name != competence.name);
   }
 
-  onAdd(input: HTMLInputElement) {
+  addCompetence(input: HTMLInputElement) {
     if (input.value != '') {
       this.list.push({ name: input.value });
       input.value = '';
     }
   }
 
-  onColor(input: HTMLInputElement) {
-    console.log(`Color: ${input.value}`);
+  changeBackgroundColor(input: HTMLInputElement) {
     if (input.value != '') {
       this.backgroundColorService.value$.next(input.value);
       input.value = '';

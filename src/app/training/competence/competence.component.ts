@@ -8,7 +8,7 @@ import { Competence } from 'src/app/shared/model/competence';
 })
 export class CompetenceComponent implements OnInit {
   @Input() competence: Competence | undefined;
-  @Output() onDelete = new EventEmitter<Competence>();
+  @Output() deleteCompetence = new EventEmitter<Competence>();
   constructor() { }
 
   ngOnInit(): void {
@@ -16,7 +16,7 @@ export class CompetenceComponent implements OnInit {
 
   doDelete() {
     if (this.competence) {
-      this.onDelete.emit(this.competence);
+      this.deleteCompetence.emit(this.competence);
     }
   }
 }

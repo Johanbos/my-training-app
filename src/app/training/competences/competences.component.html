@@ -8,10 +8,10 @@
     </li>
 </ul>
 
-<app-competence [competence]="currentCompetence" (onDelete)=delete($event)></app-competence>
+<app-competence [competence]="currentCompetence" (deleteCompetence)=deleteCompetence($event)></app-competence>
 
 <h3>Add something cool</h3>
-<input type="text" #txtName (keyup.enter)="onAdd(txtName)">
+<input type="text" #txtName (keyup.enter)="addCompetence(txtName)">
 
 <h3>Make it colorful</h3>
-<input type="text" #txtColor (keyup.enter)="onColor(txtColor)">
+<input type="text" #txtColor (keyup.enter)="changeBackgroundColor(txtColor)">
