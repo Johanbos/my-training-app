@@ -33,7 +33,7 @@ export class FavoritesComponent implements OnInit, OnDestroy {
     this.competences = this.competences.filter(item => item.name != competence.name);
   }
 
-  averageRate(): number {
+  get averageRate(): number {
     const rated = this.competences.filter(item => item.rate);
     const total = rated.reduce((acc, item) => acc + (item.rate || 0), 0);
     return total / rated.length;
