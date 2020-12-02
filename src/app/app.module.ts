@@ -11,6 +11,9 @@ import { PhotosComponent } from './photos/photos.component';
 import { CompetenceComponent } from './training/competence/competence.component';
 import { CompetencesComponent } from './training/competences/competences.component';
 import { FavoritesComponent } from './shared/favorites/favorites.component';
+import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
+import { HomeComponent } from './core/home/home.component';
+import { MenuComponent } from './core/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { FavoritesComponent } from './shared/favorites/favorites.component';
     LoadingComponent,
     PhotosComponent,
     CompetenceComponent,
-    FavoritesComponent],
+    FavoritesComponent,
+    PageNotFoundComponent,
+    HomeComponent,
+    MenuComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
