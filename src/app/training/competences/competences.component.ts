@@ -1,7 +1,7 @@
 import { EventEmitter, HostListener, Input, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { Competence } from '../shared/model/competence';
-import { BackgroundColorService } from '../shared/service/background-color.service';
+import { Competence } from 'src/app/shared/model/competence';
+import { BackgroundColorService } from 'src/app/shared/service/background-color.service';
 
 @Component({
   selector: 'app-competences',

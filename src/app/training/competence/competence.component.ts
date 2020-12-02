@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Competence } from '../shared/model/competence';
+import { Competence } from 'src/app/shared/model/competence';
 
 @Component({
   selector: 'app-competence',

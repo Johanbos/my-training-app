@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CompetencesComponent } from './competences/competences.component';
-import { TrainingComponent } from './training/training.component';
+import { TrainingComponent } from './training/training/training.component';
 import { FormsModule } from '@angular/forms';
 import { LinksComponent } from './links/links.component';
-import { LoadingComponent } from './loading/loading.component';
+import { LoadingComponent } from './shared/loading/loading.component';
 import { PhotosComponent } from './photos/photos.component';
-import { CompetenceComponent } from './competence/competence.component';
+import { CompetenceComponent } from './training/competence/competence.component';
+import { CompetencesComponent } from './training/competences/competences.component';
 
 @NgModule({
   declarations: [
