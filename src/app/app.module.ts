@@ -14,6 +14,7 @@ import { FavoritesComponent } from './shared/favorites/favorites.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 import { HomeComponent } from './core/home/home.component';
 import { MenuComponent } from './core/menu/menu.component';
+import { CoursesComponent } from './training/courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MenuComponent } from './core/menu/menu.component';
     FavoritesComponent,
     PageNotFoundComponent,
     HomeComponent,
-    MenuComponent],
+    MenuComponent,
+    CoursesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

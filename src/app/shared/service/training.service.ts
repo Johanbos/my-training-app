@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { delay } from 'rxjs/operators';
+import { delay, map } from 'rxjs/operators';
 import { Training } from '../model/training';
 
 @Injectable({
@@ -10,8 +10,16 @@ import { Training } from '../model/training';
 export class TrainingService {
   constructor(private httpClient: HttpClient) { }
 
-  getTraining(): Observable<Training> {
-    return this.httpClient.get<Training>('/assets/data/training.json')
+  getTraining(name: string): Observable<Training | undefined> {
+    return this.httpClient.get<Training[]>('/assets/data/courses.json')
+      .pipe(
+        map((courses) => courses.find(i => i.name == name)),
+        delay(1000)
+      );
+  }
+
+  getCourses(): Observable<Training[]> {
+    return this.httpClient.get<Training[]>('/assets/data/courses.json')
       .pipe(
         delay(1000)
       );

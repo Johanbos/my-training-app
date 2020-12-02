@@ -1,3 +1,5 @@
-<h2>Competences of training {{ training.name }}</h2>
 <app-loading [loading]="loading"></app-loading>
-<app-competences *ngIf="!loading" [list]="training.competences"></app-competences>
+<ng-container *ngIf="course$ | async as course">
+    <h2>Competences of training {{ course.name }}</h2>
+    <app-competences [list]="course.competences"></app-competences>
+</ng-container>

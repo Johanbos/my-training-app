@@ -10,7 +10,7 @@ export const appRoutes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'favorites', component: FavoritesComponent },
     { path: 'photos', component: PhotosComponent },
-    { path: 'training', component: TrainingComponent },
+    { path: 'course/:name', component: TrainingComponent },
     { path: 'links', component: LinksComponent },
     { path: '**', component: PageNotFoundComponent }
 ];
