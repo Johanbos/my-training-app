@@ -14,4 +14,9 @@ export const routes: Routes = [
     RouterModule.forChild(routes)
   ]
 })
-export class LinksModule { }
+export class LinksModule {
+
+  constructor() {
+    console.log("LinksModule constructed");
+  }
+}

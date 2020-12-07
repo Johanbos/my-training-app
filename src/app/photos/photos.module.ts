@@ -14,4 +14,9 @@ export const routes: Routes = [
     RouterModule.forChild(routes)
   ]
 })
-export class PhotosModule { }
+export class PhotosModule {
+
+  constructor() {
+    console.log("PhotosModule constructed");
+  }
+}
