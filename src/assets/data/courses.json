@@ -86,6 +86,16 @@
                 "name": "Modules: lazy, preload",
                 "completed": "2020-12-07 13:45",
                 "rate": 5
+            },
+            {
+                "name": "Named router outlets",
+                "completed": "2020-12-07 15:00",
+                "rate": 1
+            },
+            {
+                "name": "Content projection",
+                "completed": "2020-12-07 16:20",
+                "rate": 4
             }
         ]
     }
