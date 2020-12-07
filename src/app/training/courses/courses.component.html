@@ -2,6 +2,6 @@
 <app-loading [loading]="loading"></app-loading>
 <ul>
     <li *ngFor="let course of this.courses$ | async as courses">
-        <a [routerLink]="['/course', course.name]" [queryParams]="{ delay: 500 }">{{course.name}}</a>
+        <a [routerLink]="['/courses', course.name]" [queryParams]="{ delay: 500 }">{{course.name}}</a>
     </li>
 </ul>
