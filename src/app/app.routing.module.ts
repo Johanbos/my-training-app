@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
+import { ForbiddenComponent } from './core/forbidden/forbidden.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 import { FlaggedPreloadingStrategyService } from './flagged.preloading-strategy';
+import { NeverActivateGuard } from './never-activate.guard';
 
 export const appRoutes: Routes = [
   { path: '', redirectTo: 'courses', pathMatch: "full" },
+  { path: 'forbidden', component: ForbiddenComponent, canActivate: [NeverActivateGuard] },
   {
     path: 'favorites',
     loadChildren: () => import('./favorites/favorites.module')

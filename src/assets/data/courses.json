@@ -88,6 +88,11 @@
                 "rate": 5
             },
             {
+                "name": "Guards",
+                "completed": null,
+                "rate": 5
+            },
+            {
                 "name": "Named router outlets",
                 "completed": "2020-12-07 15:00",
                 "rate": 1
