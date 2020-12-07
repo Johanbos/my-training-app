@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
-import { Competence } from '../model/competence';
-import { FavoritesService } from '../service/favorites.service';
+import { Subscription } from 'rxjs';
+import { Competence } from 'src/app/shared/model/competence';
+import { FavoritesService } from 'src/app/shared/service/favorites.service';
 
 @Component({
   selector: 'app-favorites',

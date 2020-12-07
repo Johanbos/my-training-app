@@ -3,13 +3,10 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { LoadingComponent } from './shared/loading/loading.component';
-
 import { CompetenceComponent } from './training/competence/competence.component';
 import { CompetencesComponent } from './training/competences/competences.component';
-import { FavoritesComponent } from './shared/favorites/favorites.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 import { HomeComponent } from './core/home/home.component';
 import { MenuComponent } from './core/menu/menu.component';
@@ -20,6 +17,7 @@ import { LinksComponent } from './links/links/links.component';
 import { LinksModule } from './links/links.module';
 import { PhotosModule } from './photos/photos.module';
 import { PhotosComponent } from './photos/photos/photos.component';
+import { FavoritesComponent } from './favorites/favorites/favorites.component';
 
 @NgModule({
   declarations: [
