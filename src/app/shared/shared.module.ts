@@ -4,6 +4,9 @@ import { LoadingComponent } from './loading/loading.component';
 import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
+  imports: [
+    CommonModule
+  ],
   declarations: [
     LoadingComponent,
     MenuComponent
@@ -11,9 +14,6 @@ import { MenuComponent } from './menu/menu.component';
   exports: [
     LoadingComponent,
     MenuComponent
-  ],
-  imports: [
-    CommonModule
   ]
 })
 export class SharedModule { }

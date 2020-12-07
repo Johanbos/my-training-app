@@ -9,11 +9,11 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     SharedModule
-  ]
+  ],
+  declarations: [FavoritesComponent]
 })
 export class FavoritesModule { }

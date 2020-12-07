@@ -9,12 +9,12 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     SharedModule
-  ]
+  ],
+  declarations: [PhotosComponent],
 })
 export class PhotosModule {
 

@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './core/home/home.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 import { FlaggedPreloadingStrategyService } from './flagged.preloading-strategy';
 
 export const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: 'courses', pathMatch: "full" },
   {
     path: 'favorites',
     loadChildren: () => import('./favorites/favorites.module')
