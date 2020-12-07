@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
-import { ExtraOptions, PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './core/home/home.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
+import { FlaggedPreloadingStrategyService } from './flagged.preloading-strategy';
 
 export const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,13 +24,16 @@ export const appRoutes: Routes = [
   {
     path: 'links',
     loadChildren: () => import('./links/links.module')
-      .then(mod => mod.LinksModule)
+      .then(mod => mod.LinksModule),
+    data: {
+      preload: true
+    }
   },
   { path: '**', component: PageNotFoundComponent }
 ];
 
 const extraRouterOptions: ExtraOptions = {
-  preloadingStrategy: PreloadAllModules
+  preloadingStrategy: FlaggedPreloadingStrategyService
 };
 
 @NgModule({

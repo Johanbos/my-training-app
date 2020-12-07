@@ -61,10 +61,32 @@
                 "name": "Forms",
                 "completed": "2020-12-02 16:00",
                 "rate": 5
+            },
+            {
+                "name": "Styleguide doornemen",
+                "completed": null,
+                "rate": 5
+            },
+            {
+                "name": "Lifecycles doornemen",
+                "completed": null,
+                "rate": 5
             }
         ]
     },
     {
-        "name": "Angular Advanced"
+        "name": "Angular Advanced",
+        "competences": [
+            {
+                "name": "CLI add & update",
+                "completed": "2020-12-07 10:30",
+                "rate": 3
+            },
+            {
+                "name": "Modules: lazy, preload",
+                "completed": "2020-12-07 13:45",
+                "rate": 5
+            }
+        ]
     }
 ]
