@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { tap } from 'rxjs/operators';
-import { LinksService } from '../shared/service/links.service';
+import { LinksService } from 'src/app/shared/service/links.service';
 
 @Component({
   selector: 'app-links',

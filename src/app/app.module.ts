@@ -4,7 +4,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LinksComponent } from './links/links.component';
+
 import { LoadingComponent } from './shared/loading/loading.component';
 import { PhotosComponent } from './photos/photos.component';
 import { CompetenceComponent } from './training/competence/competence.component';
@@ -16,6 +16,8 @@ import { MenuComponent } from './core/menu/menu.component';
 import { CoursesComponent } from './training/courses/courses.component';
 import { CourseComponent } from './training/course/course.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LinksComponent } from './links/links/links.component';
+import { LinksModule } from './links/links.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgbModule
+    LinksModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
