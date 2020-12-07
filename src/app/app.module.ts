@@ -15,6 +15,7 @@ import { HomeComponent } from './core/home/home.component';
 import { MenuComponent } from './core/menu/menu.component';
 import { CoursesComponent } from './training/courses/courses.component';
 import { CourseComponent } from './training/course/course.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CourseComponent } from './training/course/course.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
