@@ -1,2 +1,2 @@
-<app-loading [loading]="loading"></app-loading>
+<app-loading [loading]="loading">Getting some random photos</app-loading>
 <img *ngFor="let i of this.list$ | async" [src]="i.thumbnailUrl" [alt]="i.title" />

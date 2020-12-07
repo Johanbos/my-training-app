@@ -1,4 +1,4 @@
-<app-loading [loading]="loading"></app-loading>
+<app-loading [loading]="loading">Links are coming up!</app-loading>
 <ul>
     <li *ngFor="let link of this.list$ | async">
         🔗 <a [href]="link" target="_blank">{{link}}</a>

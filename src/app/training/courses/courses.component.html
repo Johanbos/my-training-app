@@ -1,5 +1,7 @@
-<h2>Choose a course</h2>
-<app-loading [loading]="loading"></app-loading>
+<h2>Select a course</h2>
+<app-loading [loading]="loading">
+    Loading courses 📚
+</app-loading>
 <ul>
     <li *ngFor="let course of this.courses$ | async as courses">
         <a [routerLink]="['/courses', course.name]" [queryParams]="{ delay: 500 }">{{course.name}}</a>
