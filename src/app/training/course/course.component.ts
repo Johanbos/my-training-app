@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { combineLatest, forkJoin, Observable } from 'rxjs';
-import { combineAll, map, switchMap, tap } from 'rxjs/operators';
+import { combineLatest, Observable } from 'rxjs';
+import { map, switchMap, tap } from 'rxjs/operators';
 import { Course } from 'src/app/shared/model/course';
 import { CoursesService } from 'src/app/shared/service/courses.service';
 

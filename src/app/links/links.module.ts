@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LinksComponent } from './links/links.component';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LinksComponent } from './links/links.component';
 
 export const routes: Routes = [
   { path: '', component: LinksComponent },
