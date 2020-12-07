@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { LoadingComponent } from './shared/loading/loading.component';
-import { PhotosComponent } from './photos/photos.component';
+
 import { CompetenceComponent } from './training/competence/competence.component';
 import { CompetencesComponent } from './training/competences/competences.component';
 import { FavoritesComponent } from './shared/favorites/favorites.component';
@@ -18,6 +18,8 @@ import { CourseComponent } from './training/course/course.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LinksComponent } from './links/links/links.component';
 import { LinksModule } from './links/links.module';
+import { PhotosModule } from './photos/photos.module';
+import { PhotosComponent } from './photos/photos/photos.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { LinksModule } from './links/links.module';
     ReactiveFormsModule,
     HttpClientModule,
     LinksModule,
+    PhotosModule,
     NgbModule,
   ],
   providers: [],
