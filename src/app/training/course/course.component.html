@@ -1,7 +1,6 @@
 <ng-container *ngIf="course$ | async as course; else loading">
     <h2>Competences of training {{ course.name }}</h2>
     <app-competences [list]="course.competences"></app-competences>
-
 </ng-container>
 <ng-template #loading>
     <app-loading></app-loading>

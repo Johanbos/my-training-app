@@ -103,9 +103,14 @@
                 "rate": 4
             },
             {
-                "name": "NGRX",
+                "name": "Ngrx / Redux store / Effect",
                 "completed": null,
                 "rate": 5
+            },
+            {
+                "name": "Smart/View components",
+                "completed": "2020-12-08 16:15",
+                "rate": 3
             }
         ]
     }
