@@ -23,7 +23,7 @@ import { favoritesReducer } from './shared/stores/favorites/favorites.reducer';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot({ favorites: favoritesReducer })
+    StoreModule.forRoot({}, {})
   ],
   providers: [NeverActivateGuard],
   bootstrap: [AppComponent]

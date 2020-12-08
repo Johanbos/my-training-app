@@ -12,3 +12,4 @@ const reducer = createReducer(initialState,
 export const favoritesReducer = (state = initialState, action: Action) => {
   return reducer(state, action);
 };
+export const favoritesFeatureKey = 'favorites';

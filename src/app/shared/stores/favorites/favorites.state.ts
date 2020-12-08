@@ -3,7 +3,12 @@
 import { Competence } from '../../model/competence';
 
 export interface FavoritesState {
-    favorites: Competence[]
+    favorites: Competence[],
+    loading: boolean
 }
 
 export const initialState: Competence[] = [];
+/* export const initialState: FavoritesState = {
+    favorites: [],
+    loading: false
+}; */
