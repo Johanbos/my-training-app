@@ -101,6 +101,11 @@
                 "name": "Content projection",
                 "completed": "2020-12-07 16:20",
                 "rate": 4
+            },
+            {
+                "name": "NGRX",
+                "completed": null,
+                "rate": 5
             }
         ]
     }

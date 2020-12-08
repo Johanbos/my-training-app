@@ -1,7 +1,8 @@
-<div *ngFor="let competence of this.competences;" #competence>
+<div *ngFor="let competence of this.favorites$ | async" #competence>
     <span>{{ competence.name }}</span>
     <span *ngIf="competence.rate"> ({{competence.rate}})</span>
+    <button class="btn btn-danger" type="button" (click)="deleteFavorite(competence)">❌ Remove</button>
 </div>
 <div>
-    Averge rate: {{averageRate}}
+    Averge rate: {{averageRate$ | async}}
 </div>

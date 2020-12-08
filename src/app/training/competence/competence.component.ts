@@ -51,7 +51,7 @@ export class CompetenceComponent implements OnInit, OnChanges {
 
   favoriteCompetenceClick() {
     if (this.competence) {
-      this.favoritesService.competenceAdded$.next(this.competence);
+      this.favoritesService.add(this.competence);
     }
   }
 }

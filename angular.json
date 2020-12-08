@@ -125,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "my-training-app"
+  "defaultProject": "my-training-app",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
