@@ -1,6 +1,6 @@
 <ng-container *ngIf="competence">
     <h3>Edit</h3>
-    <form novalidate [formGroup]="formGroup" (ngSubmit)="submit()">
+    <form novalidate [formGroup]="formGroup" (ngSubmit)="sumbit.emit(competence)">
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Name" formControlName="name">
         </div>
@@ -12,8 +12,9 @@
         </div>
         <div>
             <button class="btn btn-primary" type="submit">✅ Save</button>
-            <button class="btn btn-secondary" type="button" (click)="favoriteCompetenceClick()">⭐ Favorite</button>
-            <button class="btn btn-danger" type="button" (click)="deleteCompetenceClick()">❌ Delete</button>
+            <button class="btn btn-secondary" type="button" (click)="favorite.emit(competence)">⭐ Favorite</button>
+            <button class="btn btn-secondary" type="button" (click)="unfavorite.emit(competence)">🙁 Unfavorite</button>
+            <button class="btn btn-danger" type="button" (click)="delete.emit(competence)">❌ Delete</button>
         </div>
     </form>
 </ng-container>

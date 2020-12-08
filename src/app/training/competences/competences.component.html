@@ -9,8 +9,9 @@
     </li>
 </ul>
 
-<app-competence [competence]="currentCompetence" (saveCompetence)=saveCompetence($event)
-    (deleteCompetence)=deleteCompetence($event)></app-competence>
+<app-competence [competence]="currentCompetence" (sumbit)="saveCompetence($event)" (delete)="deleteCompetence($event)"
+    (favorite)="favoriteCompetence($event)" (unfavorite)="unfavoriteCompetence($event)">
+</app-competence>
 
 <h3>Add something cool</h3>
 <input type="text" #txtName (keyup.enter)="addCompetence(txtName)">
