@@ -1,11 +1,12 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Competence } from 'src/app/shared/model/competence';
 
 @Component({
   selector: 'app-competence',
   templateUrl: './competence.component.html',
-  styleUrls: ['./competence.component.css']
+  styleUrls: ['./competence.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CompetenceComponent implements OnInit, OnChanges {
   @Input() competence?: Competence;

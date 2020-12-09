@@ -111,6 +111,16 @@
                 "name": "Smart/View components",
                 "completed": "2020-12-08 16:15",
                 "rate": 3
+            },
+            {
+                "name": "Change detection doornemen",
+                "completed": null,
+                "rate": 4
+            },
+            {
+                "name": "Performance tips",
+                "completed": null,
+                "rate": 5
             }
         ]
     }
