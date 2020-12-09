@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { Competence } from 'src/app/shared/model/competence';
 import { FavoritesService } from 'src/app/shared/service/favorites.service';
+import { favoritesStateFeatureKey } from 'src/app/shared/stores/favorites/favorites.reducer';
 import { FavoritesState } from 'src/app/shared/stores/favorites/favorites.state';
 
 @Component({
@@ -14,11 +15,12 @@ import { FavoritesState } from 'src/app/shared/stores/favorites/favorites.state'
 export class FavoritesComponent implements OnInit {
   favorites$: Observable<Competence[]> | undefined;
 
-  constructor(private store: Store<FavoritesState>, private favoritesService: FavoritesService) { }
+  constructor(private store: Store<{ [favoritesStateFeatureKey]: FavoritesState }>, private favoritesService: FavoritesService) { }
 
   ngOnInit(): void {
     this.favorites$ = this.store.pipe(
-      select(state => state.favorites)
+      select(state => state.favoritesState.favorites),
+      tap(state => console.log(state)),
     );
   }
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { favoritesStateFeatureKey } from '../stores/favorites/favorites.reducer';
 import { FavoritesState } from '../stores/favorites/favorites.state';
 
 @Component({
@@ -12,11 +13,11 @@ import { FavoritesState } from '../stores/favorites/favorites.state';
 export class MenuComponent implements OnInit {
   favoritesNumber$: Observable<number> | undefined;
 
-  constructor(private store: Store<FavoritesState>) { }
+  constructor(private store: Store<{ [favoritesStateFeatureKey]: FavoritesState }>) { }
 
   ngOnInit(): void {
     this.favoritesNumber$ = this.store.pipe(
-      map(state => state.favorites.length),
+      map(state => state.favoritesState.favorites.length),
     )
   }
 }

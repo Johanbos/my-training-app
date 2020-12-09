@@ -7,8 +7,8 @@ export interface FavoritesState {
     loading: boolean
 }
 
-export const initialState: Competence[] = [];
-/* export const initialState: FavoritesState = {
+//export const initialState: Competence[] = [];
+export const initialState: FavoritesState = {
     favorites: [],
     loading: false
-}; */
+};

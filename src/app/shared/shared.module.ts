@@ -4,13 +4,13 @@ import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { LoadingComponent } from './loading/loading.component';
 import { MenuComponent } from './menu/menu.component';
-import { favoritesFeatureKey, favoritesReducer } from './stores/favorites/favorites.reducer';
+import { favoritesStateFeatureKey, favoritesReducer } from './stores/favorites/favorites.reducer';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    StoreModule.forFeature(favoritesFeatureKey, favoritesReducer),
+    StoreModule.forFeature(favoritesStateFeatureKey, favoritesReducer),
   ],
   declarations: [
     LoadingComponent,
